@@ -1,2 +1,4 @@
 # Ignore all txt files
 *.txt
+__pycache__/
+*.py[cod]
