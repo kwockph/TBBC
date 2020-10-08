@@ -83,10 +83,10 @@ def get_user_best(u, m = None, limit = None, type = None):
     url = _API_URL + "get_user_best"
     params = {
         "k": _key,
-        "u": str(u),
-        "m": str(m),
-        "limit": str(limit),
-        "type": str(type)
+        "u": u,
+        "m": m,
+        "limit": limit,
+        "type": type
     }
     nones = []
     for key in params:
