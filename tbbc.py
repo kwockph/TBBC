@@ -1,22 +1,15 @@
 # tbbc.py
+# Tournament bot by Coni
+
+# Standard modules
 import time
-import requests
 
-# Get key from apikey.txt
-key = ""
-with open("apikey.txt","r") as f:
-    key = f.readline().strip()
+# External modules
 
-# Test if it works
-url = "https://osu.ppy.sh/p/api/get_user_best"
-params = {"k": key, "u": 2188855, "m": 0, "limit": 10, "type": "id"}
-
-resp = requests.get(url, params)
-data = resp.json()
-
-print(data)
+# Custom modules
+from tbbc_osu import *
 
 # Main loop
-while True:
+#while True:
 
-    time.sleep(2) # Avoid spamming requests
+#    time.sleep(2) # Avoid spamming requests
