@@ -2,7 +2,7 @@
 # Tournament bot by Coni
 
 # Standard modules
-import time
+import asyncio
 
 # External modules
 
@@ -10,7 +10,10 @@ import time
 from tbbc_discord import *
 from tbbc_osu import *
 
-# Main loop
-#while True:
+async def main():
+    print("=== TBBC ===")
 
-#    time.sleep(2) # Avoid spamming requests
+    client = tbbc_discord_client()
+    client.run()
+
+asyncio.run(main())
