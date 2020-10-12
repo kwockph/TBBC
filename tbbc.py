@@ -3,6 +3,8 @@
 
 # Standard modules
 import asyncio
+#import nest_asyncio
+#nest_asyncio.apply()
 
 # External modules
 
@@ -10,7 +12,7 @@ import asyncio
 from tbbc_discord import *
 from tbbc_osu import *
 
-async def main():
+def main():
     print("=== TBBC ===")
 
     client = tbbc_discord_client()
