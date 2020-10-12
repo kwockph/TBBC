@@ -42,7 +42,7 @@ m = None, a = None, h = None, limit = None, mods = None):
             nones.append(key)
     for key_name in nones:
         del params[key_name]
-    return requests.post(url, params).json()
+    return requests.post(url, params).json()[0]
 
 def get_user(u, m = None, type = None, event_days = None):
     url = _API_URL + "get_user"
@@ -59,7 +59,7 @@ def get_user(u, m = None, type = None, event_days = None):
             nones.append(key)
     for key_name in nones:
         del params[key_name]
-    return requests.post(url, params).json()
+    return requests.post(url, params).json()[0]
 
 def get_scores(b, u = None, m = None, mods = None, type = None, limit = None):
     url = _API_URL + "get_scores"
@@ -77,7 +77,7 @@ def get_scores(b, u = None, m = None, mods = None, type = None, limit = None):
             nones.append(key)
     for key_name in nones:
         del params[key_name]
-    return requests.post(url, params).json()
+    return requests.post(url, params).json()[0]
 
 def get_user_best(u, m = None, limit = None, type = None):
     url = _API_URL + "get_user_best"
@@ -94,7 +94,7 @@ def get_user_best(u, m = None, limit = None, type = None):
             nones.append(key)
     for key_name in nones:
         del params[key_name]
-    return requests.post(url, params).json()
+    return requests.post(url, params).json()[0]
 
 def get_user_recent(u, m = None, limit = None, type = None):
     url = _API_URL + "get_user_recent"
@@ -111,7 +111,7 @@ def get_user_recent(u, m = None, limit = None, type = None):
             nones.append(key)
     for key_name in nones:
         del params[key_name]
-    return requests.post(url, params).json()
+    return requests.post(url, params).json()[0]
 
 def get_match(mp):
     url = _API_URL + "get_match"
@@ -125,7 +125,7 @@ def get_match(mp):
             nones.append(key)
     for key_name in nones:
         del params[key_name]
-    return requests.post(url, params).json()
+    return requests.post(url, params).json()[0]
 
 def get_replay(k, b, u, m = None, s = None, type = None, mods = None):
     url = _API_URL + "get_replay"
@@ -144,4 +144,4 @@ def get_replay(k, b, u, m = None, s = None, type = None, mods = None):
             nones.append(key)
     for key_name in nones:
         del params[key_name]
-    return requests.post(url, params).json()
+    return requests.post(url, params).json()[0]
